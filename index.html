@@ -4,136 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital@0;1&family=Holtwood+One+SC&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
     <title>Document</title>
     <style>
         * {
             text-decoration: none;
             margin: 0;
             padding: 0;
+            
         }
 
         :root {
-            --card-backGround: #D0D0D0;
-            --text-color: white;
-            --font-size-text: 14px;
+            --font-size-text: 12px;
+            --font-title:Holtwood One SC, serif;
+            --font-text: Alumni Sans, sans-serif;
+            --box-shadow: 0 4px 4px 0 #00000070;
+    
+            
+        }
+        body{
+
+        }
+        h2{
+            font-family: var(--font-title);
+            
+        }
+        a{
+            color: var(--color-pink);
+        }
+        p,h3{
+            font-family: var(--font-text);
+            
+        }
+        button{
+            background-color: var(--color-pink);
+            color: var(--color-cream);
+            border: none;
+            padding: 2% 5%;
+            border-radius: 5px;
+            font-family: var(--font-text);
+        }
+        .folder{
+            width: 40%;
+            height: auto;
+            background-color:var(--color-cream);
+            padding: 2% 3%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            box-shadow: var(--box-shadow);
+            border: var(--border);
+            border-radius: 10px;
+        }
+        .container-png{
+            width: 100%;
+            height: 20vh;
+            background-color: white;
+            border:var(--border);
+            border-radius: 0 20px 0 20px;
+        }
+        .container-png img{
+            width: 100%;
+            height: 20vh;
+            object-fit: cover;
+            border-radius: 0 20px 0 20px;
         }
         .container-projects{
             display: flex;
-            gap: 1rem;
             flex-wrap: wrap;
-        }
+            gap: 1rem;
+            justify-content: center;
 
-        .folder {
-            width: 25%;
-            height: auto;
-            background-color: var(--card-backGround);
-            border-radius: 10px;
-            overflow: hidden;
+        }
+        .container-text{
+            border: var(--border);
+            padding: 5%;
             display: grid;
-            padding: 1%;
-            font-size: var(--font-size-text);
-            color: var(--text-color);
-
+            gap: 0.7rem;
+            border-radius: 20px 0px 20px 0px;
+            
         }
-
-        .container-text {
-            margin: 0 7%;
+        .container-tec{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 20px;
+            justify-content: center;
         }
-
-        .container-png {
-            width: 90%;
-            height: 20vh;
-            background-color: white;
-            margin: 3% auto;
-            border-radius: 0 20px 0 20px;
-            position: relative;
-        }
-
-        .data {
-            text-align: center;
-            width: 50%;
-            height: 4vh;
-            background-color: #E19CBB;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            border-radius: 30px 0 0 0;
-        }
-        .data p{
-            margin: 8% auto;
-        }
+        
+        
+       
 
     </style>
 </head>
 
 <body>
-    <section>
-        <div class="container-projects">
-            <!-- <a href="barberCursewebsite/"> -->
-                <!-- <div class="folder">
-
-                    <div class="container-png">
-                        <div class="container-tec">
-
-                        </div>
-                        <div class="data">
-
-                        </div>
-
-                    </div>
-                    <div class="container-text">
-                        <h2>titulo</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo porro, illo magni aut id
-                            deserunt, laborum velit quaerat earum aliquam aliquid voluptate ullam dicta, dolore itaque
-                            et optio saepe necessitatibus!</p>
-
-                    </div>
- -->
-
-
-                <!-- </div> -->
-            <!-- </a> -->
-
-
-
-        </div>
-    </section>
-    <script>
-
-        const dataCards = [
-            { title: 'titulo', description: 'descrição', img: '../img/capa.png', date: '12/04/2025' },
-            { title: 'titulo', description: 'descrição', img: '', date: '' },
-            { title: 'titulo', description: 'descrição', img: '', date: '' },
-            { title: 'titulo', description: 'descrição', img: '', date: '' },
-        ]
-        const containerProjects = document.querySelector('.container-projects')
-        dataCards.forEach(itens =>{
-            const folder = document.createElement('div')
-            folder.classList.add('folder')
-
-            folder.innerHTML =`
-             <div class="container-png">
-                    <img scr="${itens.img}" alt="">
-                        <div class="container-tec">
-
-                        </div>
-                        <div class="data">
-                        <p>${itens.date}</p>
-
-                        </div>
-
-                    </div>
-                    <div class="container-text">
-                        <h2>${itens.title}</h2>
-                        <p>${itens.description}</p>
-
-                    </div>
-            `
-          containerProjects.appendChild(folder)  
-
-        })
-
-    </script>
+   
 </body>
 
 </html>

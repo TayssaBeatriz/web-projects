@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+:root{
+    --border: 1px solid #A36AFF;
+    --b-radius: 20px;
+    --color: #A36AFF;
+    --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.467);
+    --font-title :Doppio One, sans-serif;
+    --font-txt:Cardo, serif;
+}
+a{
+    color: black;
+}
+h2{
+    font-family: var(--font-title);
+}
+p{
+    font-family: var(--font-txt);
+}
+.container{
+    height: 10vh;
+    padding: 3%;
+    margin: 3% ;
+    border: var(--border); 
+    border-radius: 20px 20px 10px 10px;
+}
+
+.containerProjects{
+    height: auto;
+    border: var(--border);
+    border-radius:var(--b-radius);
+    margin: 3%;
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.card-project{
+    width: 36%;
+    height:auto;
+    padding: 5%;
+    border-radius: var(--b-radius);
+     border: var(--border);
+     display: grid;
+     gap: 1rem;
+}
+.card-project:hover{
+    box-shadow: var(--shadow);
+    transform: scale(1.1);
+    background-color: #A36AFF;
+    color: white;
+}
+.technologies{
+    width: 90%;
+    height: auto;
+    padding: 0 5%;
+    display: flex;
+    gap: 0.2em;
+    justify-content: center;
+    position: absolute;
+}
+.tech{
+    height: auto;
+    width: max-content;
+    padding: 3%;
+    border-radius: 0 0 5px 5px;
+    font-size: 10px;
+    color: white;
+    box-shadow: var(--shadow);
+    z-index: 999;
+}
+.data{
+    width: max-content;
+    height: auto;
+    padding:2% 10%;
+    border-radius: 20px 0 9px 0;
+    background-color:var(--color);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    color: white;
+}
+.container-img{
+    border: var(--border);
+     border-radius: 10px;
+     position: relative;
+    background-color: white;
+
+}
+.container-img,
+.container-img img{
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.container-txt{
+    margin: 3%;
+}
+@media (orientation: landscape){
+    .container-img,
+    .container-img img{
+        height: 30vh;
+
+    }
+    .containerProjects{
+        gap: 2rem;
+    }
+
+    .card-project{
+    width: 35%;
+    }
+
+}
